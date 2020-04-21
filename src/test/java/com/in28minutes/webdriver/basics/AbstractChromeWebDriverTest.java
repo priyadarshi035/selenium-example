@@ -18,7 +18,10 @@ public abstract class AbstractChromeWebDriverTest {
 	@BeforeTest
 	public void beforeTest() {
 		//Download the web driver executable
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
+		        System.setProperty(
+                "webdriver.chrome.driver",
+                "webdriver/chromedriver");
 		
 		//Create a instance of your web driver - chrome
 		driver = new ChromeDriver();
